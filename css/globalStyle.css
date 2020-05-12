@@ -1,0 +1,1196 @@
+/* Global Style */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #2D2D2D;
+    color: #E7E8EB;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.container {
+    height: 110%;
+}
+
+a {
+    text-decoration: none;
+    color: #E7E8EB;
+}
+
+hr {
+    margin: 20px 0;
+}
+
+input:focus {
+    box-shadow: 0px 0px 5px rgb(0, 217, 255);
+}
+
+textarea:focus {
+    box-shadow: 0px 0px 5px rgb(0, 217, 255);
+}
+
+button {
+    color: white !important;
+}
+
+/*  Global Class */
+.white-hover:hover {
+    color: white;
+}
+
+.btn {
+    padding: 10px 15px;
+    background-color: rgba(95, 165, 117, 0.5);
+    border: 0;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgb(95, 165, 117);
+}
+
+.btn:hover a {
+    color: white;
+}
+
+ul.pagination {
+    list-style: none;
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+ul.pagination a {
+    display: inline-block;
+    padding: 10px;
+    border-right: 1px solid gray;
+}
+
+ul.pagination a:hover {
+    cursor: pointer;
+    background-color: #5A9E6F;
+    color: white;
+}
+
+ul.pagination a.active {
+    background-color: rgba(90, 158, 111, 0.8);
+    color: white;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid gray;
+    font-size: 0.8em;
+    border-radius: 5px;
+    background-color: rgba(95, 165, 117, 0.2);
+    margin: 5px 2px;
+    color: white;
+}
+
+.badge:hover {
+    cursor: pointer;
+    background-color: rgba(95, 165, 117, 0.5);
+    color: white;
+}
+
+.box {
+    border: 1px solid #5A9E6F;
+    margin: 2px;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+.arrow {
+    font-size: 1.8em;
+}
+
+.arrow:hover {
+    color: #5A9E6F;
+}
+
+.img-thumnail.hover:hover {
+    filter: brightness(1.1);
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+
+form .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+form .input-group h4 {
+    margin-bottom: 10px;
+}
+
+form .input-group input {
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: white;
+    border: 1px solid gray;
+}
+
+form .input-group textarea {
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: white;
+    font-size: 0.9em;
+    height: 250px;
+    border: 1px solid gray;
+}
+
+small.error {
+    display: inline-block;
+    margin-top: 5px;
+    color: rgb(236, 79, 79);
+    align-self: start;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.card {
+    border: 1px solid gray;
+    border-radius: 16px;
+    background-color: #242729;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.card .card-header {
+    border-bottom: 1px solid gray;
+    padding: 16px 20px;
+    background-color: #1f2222;
+    text-align: center;
+}
+
+.card .card-body {
+    padding: 16px 20px 10px;
+}
+
+.card .card-footer {
+    border-top: 1px solid gray;
+    padding: 10px 20px;
+    background-color: #1f2222;
+    text-align: center;
+}
+
+.alert {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10px;
+    background-color: rgba(248, 41, 41, 0.76);
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.toggle {
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(228, 218, 238);
+    border-radius: 3px;
+}
+
+.toggle:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.toggle:hover span {
+    background-color: white;
+}
+
+.toggle span:first-child {
+    transform-origin: 0 0;
+    transform: rotate(45deg) translate(1px, -0.5px);
+}
+
+.toggle span:last-child {
+    transform-origin: 0 0;
+    transform: rotate(-45deg) translate(-2.5px, 2px);
+}
+
+a .btn.btn-login {
+    display: block;
+    margin: 50px auto;
+}
+
+
+/*  Navbar */
+
+header {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(57, 57, 57);
+    box-shadow: 0 1px 5px black;
+    height: 60px;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+
+}
+
+header .logo {
+    flex-grow: 1.5;
+    color: #CFD2D6;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 3px;
+    font-size: 1.1em;
+}
+
+header form {
+    flex-grow: 5;
+    text-align: center;
+}
+
+header form input {
+    width: 90%;
+    height: 35px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: rgba(54, 54, 54, 0.5);
+    color: white;
+}
+
+header .info {
+    flex-grow: 1;
+    display: flex;
+}
+
+header .info .img-thumnail {
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    margin: 0 5px;
+    border-radius: 2px;
+}
+
+header .info .logout {
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    font-size: 30px;
+    color: #CFD2D6;
+    text-align: center;
+}
+
+header .info .logout:hover {
+    cursor: pointer;
+    color: rgb(245, 245, 245);
+}
+
+header .info .img-thumnail img {
+    width: 100%;
+}
+
+header .info .img-thumnail img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/*  Menu TOggle */
+.dropdown {
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(228, 218, 238);
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 45px;
+    height: 28px;
+    opacity: 0;
+    left: -8px;
+    top: -3px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked~span:nth-child(4) {
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+    transform: scale(0);
+}
+
+
+/* Kontent */
+
+.container {
+    padding-top: 65px;
+    padding: 100px 5px 50px;
+    width: 95%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+}
+
+/* Main */
+.container main {
+    padding-right: 20px;
+    box-sizing: border-box;
+    width: 75%;
+}
+
+/* Judul */
+.container main .judul {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.container main .judul p {
+    font-size: x-large;
+    font-weight: 500;
+}
+
+/* Nav */
+.container main nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Section Question */
+
+.question {
+    display: flex;
+    border: 1px solid gray;
+    box-sizing: border-box;
+}
+
+.question .info-question {
+    /* width: 20%; */
+    border-right: 0.5px solid gray;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.all-questions {
+    margin-bottom: 30px;
+}
+
+.question .detail-question {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.question .detail-question .header-detail {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.question .detail-question a {
+    text-decoration: none;
+    color: rgb(74, 171, 255);
+}
+
+.question .detail-question a:hover {
+    color: rgb(106, 168, 223);
+}
+
+.question .detail-question small {
+    font-size: 0.6em;
+    display: inline-block;
+    padding: 4px 0;
+    color: rgb(184, 184, 184);
+}
+
+.question .detail-question small a {
+    text-decoration: underline;
+}
+
+
+.pagination-question {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*  Aside */
+
+.container aside {
+    width: 25%;
+}
+
+.container aside nav {
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
+
+.container aside nav ul {
+    list-style: none;
+    border-left: 1px solid gray;
+}
+
+.container aside nav ul li {
+    padding: 10px;
+}
+
+.container aside nav ul li a {
+    text-decoration: none;
+    color: #E7E8EB;
+}
+
+.container aside nav ul li.active-2 {
+    background-color: #242729;
+    border-left: rgb(95, 165, 117) 3px solid;
+}
+
+.container aside nav ul li.active-2 a {
+    color: white;
+}
+
+.container aside nav ul li a:hover {
+    color: white;
+}
+
+.container aside h3 {
+    margin-bottom: 10px;
+}
+
+.container aside .popular {
+    margin-top: 30px;
+}
+
+.container aside .popular ul {
+    list-style: none;
+}
+
+.container aside .popular ul li {
+    border-bottom: 1px solid gray;
+    font-size: small;
+    padding: 10px 5px;
+}
+
+.container aside .popular ul li:hover {
+    background-color: #242729;
+    cursor: pointer;
+    color: white;
+}
+
+
+.container aside .list-tag {
+    margin-top: 35px;
+}
+
+footer {
+    padding: 20px;
+    background-color: #242729;
+    box-shadow: 0 1px 5px black;
+    color: #CFD2D6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer h4 {
+    margin-bottom: 5px;
+}
+
+footer a {
+    color: rgb(74, 171, 255);
+    text-decoration: underline;
+}
+
+footer a:hover {
+    cursor: pointer;
+    color: rgb(106, 168, 223);
+}
+
+
+/* Question Article */
+
+.container main#question .my-question {
+    display: flex;
+    align-items: center;
+}
+
+.container main#question .my-question .vote {
+    padding: 0 20px;
+    text-align: center;
+}
+
+.container main#question .my-question article {
+    padding-left: 20px;
+    border-left: 1px solid gray;
+}
+
+.container main#question .my-question .article-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.container main#question .my-question .article-header .title {
+    font-size: 1.1em;
+    width: 75%;
+    padding-right: 30px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    width: 25%;
+}
+
+.profile small {
+    text-align: center;
+    font-size: 0.7em;
+    padding: 0 10px;
+    display: block;
+}
+
+.profile .img-thumnail {
+    width: 40px;
+}
+
+.profile .img-thumnail img {
+    width: 100%;
+    display: block;
+    border: 1px solid white;
+}
+
+.container main#question .my-question .article-content {
+    font-size: 0.95em;
+}
+
+/* All Answer */
+
+.container main#question .answer {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.container main#question .jumlah-answer {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.container main#question .answer .vote {
+    padding: 0 20px;
+}
+
+.container main#question .answer h4 {
+    text-align: center;
+}
+
+.container main#question .answer .answer-content {
+    padding-left: 20px;
+    border-left: 1px solid gray;
+    width: 100%;
+}
+
+.container main#question .answer .profile {
+    flex-direction: row-reverse;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.container main#question .answer .profile a.hapus {
+    border-radius: 5px;
+    padding: 5px 15px;
+    background-color: rgba(255, 55, 55, 0.897);
+}
+
+.container main#question form {
+    width: 60%;
+    margin: 30px auto;
+}
+
+.container main#question form textarea {
+    width: 100%;
+    display: block;
+    background-color: rgba(54, 54, 54, 0.5);
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    height: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px 0;
+    box-sizing: border-box;
+}
+
+.container main#question form button {
+    float: right;
+}
+
+/* Ask Form */
+
+.container main#ask p {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.container main#ask form {
+    background-color: #242729;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 30px 30px 30px 0;
+    border: 1px solid gray;
+}
+
+/* User */
+
+.container main#user form {
+    width: 30%;
+}
+
+.container main#user form input {
+    padding: 10px 15px;
+    background-color: #242729;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container main#user .all-user {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container main#user .all-user .user {
+    margin: 30px 5px 10px;
+    background-color: #242729;
+    border: 1px solid gray;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.container main#user .all-user .user .img-thumnail {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin: 0 auto;
+    top: -25px
+}
+
+.container main#user .all-user .user .img-thumnail img {
+    width: 100%;
+}
+
+.container main#user .all-user .user .body {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8em;
+    margin-top: -20px;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.container main#user .all-user .user .body span {
+    padding: 1px 0;
+}
+
+.container main#user .all-user .user .body a {
+    color: rgb(74, 171, 255);
+    text-decoration: underline;
+}
+
+.container main#user .all-user .user .body a:hover {
+    color: rgb(106, 168, 223);
+}
+
+.container main#user .all-user .user .footer {
+    margin-top: 10px;
+    border-top: 1px solid gray;
+    padding: 10px 10px;
+    font-size: 0.7em;
+    text-align: center;
+    background-color: #1f2222;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Details */
+
+.container main#detail ul {
+    list-style: none;
+    display: flex;
+}
+
+.container main#detail ul li {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 15px;
+    font-size: 0.8em;
+}
+
+.container main#detail ul li.active {
+    border: 1px solid gray;
+    background-color: rgba(95, 165, 117, 0.5);
+    color: white;
+}
+
+/* My Profile */
+
+.container main#detail .my-profile {
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.container main#detail .my-profile .img-thumnail {
+    width: 200px;
+}
+
+.container main#detail .my-profile .img-thumnail img {
+    width: 100%;
+    border: 1px solid white;
+}
+
+.container main#detail .my-profile .profile {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    flex-grow: 1;
+    align-items: flex-start;
+    align-self: flex-start;
+}
+
+.container main#detail .my-profile .profile h2 {
+    margin-bottom: 5px;
+}
+
+.container main#detail .my-profile .profile span {
+    padding: 1px 0;
+    font-size: 0.9em;
+}
+
+/* My Question */
+
+.container main#detail .all-my-questions p:first-child {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.container main#detail .all-my-questions .my-question {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.container main#detail .all-my-questions hr {
+    margin: 5px;
+}
+
+.container main#detail .all-my-questions .my-question a#hapus {
+    display: flex;
+    border-radius: 5px;
+    padding: 0 15px;
+    background-color: rgba(255, 55, 55, 0.897);
+    align-items: center;
+    margin-right: 5px;
+    height: 30px;
+}
+
+.container main#detail .all-my-questions .my-question a#hapus:hover {
+    background-color: rgb(255, 55, 55);
+}
+
+.container main#detail .all-my-questions .my-question .title {
+    font-size: 1em;
+    padding: 0 10px;
+}
+
+.container main#detail .all-my-questions .my-question .title a:hover {
+    color: white;
+}
+
+.container main#detail .all-my-questions .my-question small {
+    font-size: 0.7em;
+    text-align: center;
+}
+
+
+.container main#detail .all-my-questions .my-question .info-question {
+    display: flex;
+    flex-direction: row;
+}
+
+.container main#detail .my-profile form .input-group {
+    margin-bottom: 2px;
+}
+
+
+.container main#detail .my-profile .profile.profile-2 form {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container main#detail .my-profile .profile.profile-2 small {
+    display: inline-block;
+    margin-top: 2px;
+}
+
+.container main#detail .my-profile form .input {
+    width: 40%;
+}
+
+.container main#detail .my-profile .button button {
+    display: inline-block;
+    font-size: 0.8em;
+    margin: 10px 0 10px;
+}
+
+#login form {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+#login .btn {
+    width: 100%;
+    color: white;
+}
+
+#login .card-footer small {
+    display: block;
+    margin-top: 10px;
+}
+
+#login .card-footer small a {
+    color: rgb(74, 171, 255);
+    text-decoration: underline;
+}
+
+#login .card-footer small a:hover {
+    color: rgb(106, 168, 223);
+
+}
+
+footer.login {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+#login form.register {
+    margin-top: -40px;
+}
+
+.container main#tag .maintenence {
+    padding: 30px;
+    margin: 20px;
+    border: 2px solid gray;
+    font-size: 1.3;
+    text-align: center;
+    color: rgb(255, 58, 58);
+    background-color: #1f2222;
+}
+
+@media screen and (max-width : 1200px) {
+    .container main {
+        width: 70%;
+    }
+
+    .container aside {
+        width: 30%;
+    }
+
+    .container main#question .my-question .article-header .img-thumnail {
+        margin-bottom: 5px;
+    }
+
+    .profile {
+        flex-direction: column;
+    }
+
+    .container main#user form {
+        width: 40%;
+    }
+
+    .container main#detail .my-profile form .input {
+        width: 50%;
+    }
+
+    #login form {
+        width: 60%;
+    }
+}
+
+
+
+@media screen and (max-width : 992px) {
+    .container main {
+        width: 65%;
+    }
+
+    .container aside {
+        width: 35%;
+    }
+
+    .question .info-question {
+        flex-direction: column;
+        padding: 2px 5px;
+        justify-content: center;
+    }
+
+    main nav ul {
+        font-size: 0.9em;
+    }
+
+    .box {
+        padding: 2px;
+    }
+
+    .container main#question .my-question .article-header {
+        flex-direction: column;
+    }
+
+    .container main#question .my-question .article-header .title {
+        padding-right: 0;
+        width: 100%;
+    }
+
+    .profile {
+        flex-direction: row-reverse;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .container main#question form {
+        width: 75%;
+    }
+
+    .container main#user form {
+        width: 50%;
+    }
+
+    .container main#detail .my-profile form .input {
+        width: 55%;
+    }
+
+    #login form {
+        width: 70%;
+    }
+}
+
+
+@media screen and (max-width : 768px) {
+    body {
+        font-size: 0.95em;
+    }
+
+    .container main {
+        width: 63%;
+    }
+
+    .container aside {
+        width: 37%;
+    }
+
+    main nav {
+        flex-direction: column;
+    }
+
+    main nav p {
+        margin-bottom: 5px;
+    }
+
+    main nav ul {
+        font-size: 0.8em;
+    }
+
+    .container aside nav {
+        padding-bottom: 40px;
+    }
+
+    .container main#question form {
+        width: 85%;
+    }
+
+    .container main#detail .my-profile .profile.profile-2 form {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .container main#detail .my-profile form .input {
+        width: 100%;
+    }
+
+    .container main#detail .my-profile .button button {
+        padding-left: 12.5px;
+        padding-right: 12.5px;
+    }
+
+    #login form {
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width : 576px) {
+    .container main {
+        width: 100%;
+    }
+
+    header {
+        padding: 0 40px;
+        z-index: 10;
+    }
+
+    header .logo {
+        text-align: left;
+    }
+
+    header form {
+        display: none;
+    }
+
+    header .info {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .dropdown {
+        display: block;
+        position: absolute;
+        background-color: rgb(57, 57, 57);
+        box-shadow: 0 1px 5px black;
+        top: 60px;
+        left: 0;
+        right: 0;
+        transition: all 1s;
+        transform-origin: 0 0;
+        opacity: 0;
+        z-index: 100;
+        transform: scaleY(0.01%);
+    }
+
+    .slide {
+        transform: scaleY(100%);
+        opacity: 1;
+    }
+
+    .dropdown ul {
+        list-style: none;
+        padding: 0 10px 10px;
+    }
+
+    .dropdown ul li {
+        border-bottom: 3px solid grey;
+        padding: 15px 20px;
+    }
+
+    .dropdown ul li.active {
+        padding: 15px 20px;
+        border-bottom: rgb(95, 165, 117) 3px solid;
+        color: white;
+    }
+
+    .dropdown ul li:hover {
+        cursor: pointer;
+        color: white;
+        font-size: 1.1em;
+    }
+
+    .container main {
+        padding-right: 0;
+    }
+
+    .container aside {
+        display: none;
+    }
+
+    .container main#ask form {
+        margin-right: 0;
+    }
+
+    #login form {
+        width: 90%;
+    }
+
+    .container main#detail .my-profile .button button {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
