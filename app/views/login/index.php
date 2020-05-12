@@ -60,9 +60,9 @@ $errorInvalid = isset($data['error']['invalid']) ? $data['error']['invalid'] : '
     <footer class="login">
         <h4>STIS Bertanya - &copy; 2020</h4>
         <div>
-            <a href="">Github</a> -
-            <a href="">Instagram</a> -
-            <a href="">Facebook</a>
+            <a href="https://github.com/ekoptra/stis-bertanya-1.0" target="_blank">Github</a> -
+            <a href="https://www.instagram.com/eko_ptra/" target="_blank">Instagram</a> -
+            <a href="https://www.facebook.com/ekoputra.wahyuddin" target="_blank">Facebook</a>
         </div>
     </footer>
     <script src="<?= BASEURL; ?>/js/script2.js"></script>
