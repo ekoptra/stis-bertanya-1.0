@@ -135,13 +135,14 @@ class Question_model
             ];
             $this->_db->insert('voted_question', $newVoted);
 
-            $this->_db->select('jumlah_voted');
-            $jumlah = (int) $this->_db->getWhereOnce('question', ['id_pertanyaan', '=', $idPertanyaan])->jumlah_voted;
+            $this->_db->select('jumlah_voted, username');
+            $hasil = $this->_db->getWhereOnce('question', ['id_pertanyaan', '=', $idPertanyaan]);
+            $jumlah = (int) $hasil->jumlah_voted;
             $this->_db->update('question', ['jumlah_voted' => $jumlah + 1], ['id_pertanyaan', '=', $idPertanyaan]);
 
             $this->_db->select('jumlah_voted');
-            $jumlah = (int) $this->_db->getWhereOnce('user', ['username', '=', $username])->jumlah_voted;
-            $this->_db->update('user', ['jumlah_voted' => $jumlah + 1], ['username', '=', $username]);
+            $jumlah = (int) $this->_db->getWhereOnce('user', ['username', '=', $hasil->username])->jumlah_voted;
+            $this->_db->update('user', ['jumlah_voted' => $jumlah + 1], ['username', '=', $hasil->username]);
         }
     }
 
@@ -149,13 +150,14 @@ class Question_model
     {
         if ($this->is_voted($username, $idPertanyaan)) {
             $this->_db->delete2('voted_question', ['id_pertanyaan', '=', $idPertanyaan], ['username', '=', $username]);
-            $this->_db->select('jumlah_voted');
-            $jumlah = (int) $this->_db->getWhereOnce('question', ['id_pertanyaan', '=', $idPertanyaan])->jumlah_voted;
-            $this->_db->update('question', ['jumlah_voted' => $jumlah - 1], ['id_pertanyaan', '=', $idPertanyaan]);
+            $this->_db->select('jumlah_voted, username');
+            $hasil = $this->_db->getWhereOnce('question', ['id_pertanyaan', '=', $idPertanyaan]);
+            $jumlah = (int) $hasil->jumlah_voted;
+            $this->_db->update('question', ['jumlah_voted' => $jumlah + 1], ['id_pertanyaan', '=', $idPertanyaan]);
 
             $this->_db->select('jumlah_voted');
-            $jumlah = (int) $this->_db->getWhereOnce('user', ['username', '=', $username])->jumlah_voted;
-            $this->_db->update('user', ['jumlah_voted' => $jumlah - 1], ['username', '=', $username]);
+            $jumlah = (int) $this->_db->getWhereOnce('user', ['username', '=', $hasil->username])->jumlah_voted;
+            $this->_db->update('user', ['jumlah_voted' => $jumlah - 1], ['username', '=', $hasil->username]);
         }
     }
 

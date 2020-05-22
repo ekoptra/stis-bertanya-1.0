@@ -25,7 +25,8 @@ $errorFoto = isset($data['foto']) ? $data['foto'] : '';
 
     <div class="my-profile">
         <div class="img-thumnail <?= $formPass ? '' : 'hover' ?>" id='img-hover'>
-            <img src="<?= BASEURL . '/img/' . $biodata->foto_profile; ?>" alt="Profile">
+            <img src="<?= BASEURL . '/img/' . $biodata->foto_profile; ?>" alt="Profile" class="img-profile">
+            <span class="<?= $formPass ? 'hidden' : '' ?>">Ubah Foto Profile</span>
         </div>
 
         <div class="profile profile-2" id="profile">

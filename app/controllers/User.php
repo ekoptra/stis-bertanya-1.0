@@ -111,7 +111,7 @@ class User extends Controller
                 $error_foto = $_FILES["foto"]["error"];
                 $data['foto'] = $array_error[$error_foto];
 
-                if ($data['errorDetail']['foto'] == 0) {
+                if ($data['foto'] == 0) {
                     //Persiapan Pemindahan File
                     $namaFolder = "img";
                     $tmp = $_FILES["foto"]["tmp_name"];
